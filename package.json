@@ -20,10 +20,11 @@
     "cordova-plugin-statusbar",
     "cordova-plugin-device",
     "cordova-plugin-splashscreen",
-    "ionic-plugin-keyboard"
+    "ionic-plugin-keyboard",
+    "cordova-plugin-geolocation"
   ],
   "cordovaPlatforms": [],
   "scripts": {
-    "start": "ionic serve"
+    "start": "ionic serve -a"
   }
 }
