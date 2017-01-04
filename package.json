@@ -1,7 +1,7 @@
 {
-  "name": "hello-world",
+  "name": "Show My Location",
   "version": "1.1.1",
-  "description": "hello-world: An Ionic project",
+  "description": "Show your current location",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
@@ -25,6 +25,7 @@
   ],
   "cordovaPlatforms": [],
   "scripts": {
-    "start": "ionic serve -a"
+    "start": "ionic serve -a",
+    "build": "ionic build"
   }
 }
