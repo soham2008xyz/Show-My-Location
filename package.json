@@ -1,5 +1,5 @@
 {
-  "name": "Show My Location",
+  "name": "Show-My-Location",
   "version": "1.1.1",
   "description": "Show your current location",
   "dependencies": {
@@ -26,6 +26,6 @@
   "cordovaPlatforms": [],
   "scripts": {
     "start": "ionic serve -a",
-    "build": "ionic build"
+    "build": "ionic build android"
   }
 }

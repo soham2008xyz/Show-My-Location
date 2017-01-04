@@ -6,9 +6,12 @@ angular.module('map.controllers', [])
 
 .controller('HomeController', HomeController);
 
-function HomeController($scope, $cordovaGeolocation) {
+function HomeController($scope, $ionicLoading, $cordovaGeolocation) {
 
   $scope.locate = function () {
+    $ionicLoading.show({
+      template: "<ion-spinner></ion-spinner>"
+    });
     var posOptions = {
       timeout: 10000,
       enableHighAccuracy: true
@@ -48,11 +51,14 @@ function HomeController($scope, $cordovaGeolocation) {
               map.setCenter(latlng);
               infowindow.setContent(results[1].formatted_address);
               infowindow.open(map, marker);
+              $ionicLoading.hide();
             } else {
               console.log('No results found');
+              $ionicLoading.hide();
             }
           } else {
             console.log('Geocoder failed due to: ' + status);
+            $ionicLoading.hide();
           }
         });
         //});
